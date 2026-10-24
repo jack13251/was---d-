@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dkg8yvi4ufcyn"]
+
+[node name="Area2D" type="Area2D" unique_id=951562722]
+
+[node name="Timer" type="Timer" parent="." unique_id=1958241066]

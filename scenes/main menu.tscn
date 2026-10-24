@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://4wpu2a8wkv44"]
+
+[ext_resource type="Script" uid="uid://dnwn1vx5qh5da" path="res://scenes/main_menu.gd" id="1_5hgee"]
+[ext_resource type="FontFile" uid="uid://bsjs7vguhmvkx" path="res://assets/Jersey10-Regular.ttf" id="2_xsilq"]
+
+[node name="Control" type="Control" unique_id=1417709398]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5hgee")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1114836432]
+layout_mode = 0
+offset_left = 398.0
+offset_top = 106.0
+offset_right = 737.0
+offset_bottom = 430.0
+
+[node name="Continue" type="Button" parent="VBoxContainer" unique_id=1413555460]
+process_mode = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_xsilq")
+text = "Continue"
+
+[node name="New Game" type="Button" parent="VBoxContainer" unique_id=1838585828]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_xsilq")
+text = "New Game"
+
+[node name="Leaderboard" type="Button" parent="VBoxContainer" unique_id=1146903820]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_xsilq")
+text = "Leaderboard"
+
+[node name="Credits" type="Button" parent="VBoxContainer" unique_id=798082206]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_xsilq")
+text = "Credits"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=370439090]
+process_mode = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_xsilq")
+text = "QUIT TO DESKTOP"
+
+[connection signal="pressed" from="VBoxContainer/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_button_pressed"]

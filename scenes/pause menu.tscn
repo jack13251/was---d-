@@ -1,0 +1,134 @@
+[gd_scene format=3 uid="uid://x18to7pvos7n"]
+
+[ext_resource type="FontFile" uid="uid://bsjs7vguhmvkx" path="res://assets/Jersey10-Regular.ttf" id="1_1a20v"]
+[ext_resource type="Script" uid="uid://c3wyvyi47vxuj" path="res://scenes/pause_menu.gd" id="1_4oqnl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4oqnl"]
+font = ExtResource("1_1a20v")
+
+[sub_resource type="LabelSettings" id="LabelSettings_5srk8"]
+line_spacing = -2.0
+font = ExtResource("1_1a20v")
+font_size = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_mq6rw"]
+font = ExtResource("1_1a20v")
+font_size = 14
+
+[sub_resource type="LabelSettings" id="LabelSettings_1a20v"]
+font = ExtResource("1_1a20v")
+
+[sub_resource type="LabelSettings" id="LabelSettings_vt16c"]
+font = ExtResource("1_1a20v")
+font_size = 12
+
+[sub_resource type="LabelSettings" id="LabelSettings_7qm55"]
+font = ExtResource("1_1a20v")
+font_size = 12
+
+[sub_resource type="LabelSettings" id="LabelSettings_v1ory"]
+font = ExtResource("1_1a20v")
+font_size = 12
+
+[node name="pause menu" type="Control" unique_id=607307906]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4oqnl")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=861231833]
+layout_mode = 0
+offset_left = 299.0
+offset_top = 123.0
+offset_right = 356.0
+offset_bottom = 208.0
+
+[node name="Resume" type="Button" parent="VBoxContainer" unique_id=1053659887]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/Resume" unique_id=312364928]
+layout_mode = 0
+offset_left = 9.0
+offset_right = 52.0
+offset_bottom = 23.0
+text = "Resume"
+label_settings = SubResource("LabelSettings_4oqnl")
+
+[node name="options" type="Button" parent="VBoxContainer" unique_id=502534121]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/options" unique_id=1779049887]
+layout_mode = 0
+offset_left = 10.0
+offset_right = 53.0
+offset_bottom = 23.0
+text = "Options"
+label_settings = SubResource("LabelSettings_4oqnl")
+
+[node name="Resume3" type="Button" parent="VBoxContainer" unique_id=1275211517]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/Resume3" unique_id=2000318296]
+layout_mode = 0
+offset_left = 6.0
+offset_top = -2.0
+offset_right = 51.0
+offset_bottom = 21.0
+text = "Reset controls
+to defaults"
+label_settings = SubResource("LabelSettings_5srk8")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Resume4" type="Button" parent="VBoxContainer" unique_id=904816885]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/Resume4" unique_id=1808607389]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 61.0
+offset_bottom = 24.0
+text = "Main menu"
+label_settings = SubResource("LabelSettings_mq6rw")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=221258646]
+layout_mode = 0
+offset_left = 370.0
+offset_top = 127.0
+offset_right = 468.0
+offset_bottom = 211.0
+
+[node name="Label" type="Label" parent="VBoxContainer2" unique_id=138559907]
+layout_mode = 2
+text = "Current controls:"
+label_settings = SubResource("LabelSettings_1a20v")
+
+[node name="Forward" type="Label" parent="VBoxContainer2" unique_id=587171609]
+layout_mode = 2
+text = "Forward - "
+label_settings = SubResource("LabelSettings_vt16c")
+
+[node name="Backward" type="Label" parent="VBoxContainer2" unique_id=778145533]
+layout_mode = 2
+text = "Backward - "
+label_settings = SubResource("LabelSettings_7qm55")
+
+[node name="Jump" type="Label" parent="VBoxContainer2" unique_id=1077617512]
+layout_mode = 2
+text = "Jump -"
+label_settings = SubResource("LabelSettings_v1ory")
+
+[connection signal="pressed" from="VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="VBoxContainer/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/Resume4" to="." method="_on_resume_4_pressed"]

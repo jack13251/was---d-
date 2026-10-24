@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://i5xhfofv42hx"]
+
+[ext_resource type="Script" uid="uid://egt3smabgnve" path="res://scripts/audio_manager.gd" id="1_s2lh6"]
+[ext_resource type="AudioStream" uid="uid://c2gshcbrtnyvi" path="res://assets/asep_bagus-jump-and-run-game-backround-music-326882.mp3" id="2_uwmy1"]
+
+[node name="Node" type="Node" unique_id=1231785780]
+process_mode = 3
+script = ExtResource("1_s2lh6")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1592759772]
+stream = ExtResource("2_uwmy1")
+volume_db = -35.0
+autoplay = true
+bus = &"Music"
+parameters/looping = true

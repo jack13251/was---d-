@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://dje8rus41qarw"]
+
+[ext_resource type="Script" uid="uid://ceuct4kqigisx" path="res://scripts/tool_tips.gd" id="1_0s1hw"]
+[ext_resource type="FontFile" uid="uid://bsjs7vguhmvkx" path="res://assets/Jersey10-Regular.ttf" id="1_e10di"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0s1hw"]
+font = ExtResource("1_e10di")
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_iqeyw"]
+font = ExtResource("1_e10di")
+font_size = 14
+
+[node name="Control" type="Control" unique_id=615720860]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0s1hw")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=354480885]
+layout_mode = 0
+offset_left = 337.0
+offset_top = 193.0
+offset_right = 584.0
+offset_bottom = 360.0
+color = Color(0.46618086, 0.4661808, 0.4661808, 1)
+
+[node name="Button" type="Button" parent="." unique_id=1395606821]
+process_mode = 3
+layout_mode = 0
+offset_left = 431.0
+offset_top = 333.0
+offset_right = 477.0
+offset_bottom = 351.0
+
+[node name="Label" type="Label" parent="." unique_id=211855119]
+layout_mode = 0
+offset_left = 439.0
+offset_top = 329.0
+offset_right = 479.0
+offset_bottom = 352.0
+text = "Okay"
+label_settings = SubResource("LabelSettings_0s1hw")
+
+[node name="Tool tip" type="Label" parent="." unique_id=1418884954]
+layout_mode = 0
+offset_left = 348.0
+offset_top = 206.0
+offset_right = 576.0
+offset_bottom = 328.0
+text = "TOOL TIP GOES HERE"
+label_settings = SubResource("LabelSettings_iqeyw")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

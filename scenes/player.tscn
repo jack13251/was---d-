@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://cwxtx0hnyt2dx"]
+
+[ext_resource type="Texture2D" uid="uid://ccardutqwbv88" path="res://assets/Sprite_Sheet.png" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://d23udkshpkd4g" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="FontFile" uid="uid://bsjs7vguhmvkx" path="res://assets/Jersey10-Regular.ttf" id="3_qhqgy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
+atlas = ExtResource("1_3vyb7")
+region = Rect2(166, 0, 558, 563)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
+atlas = ExtResource("1_3vyb7")
+region = Rect2(724, 0, 558, 563)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
+atlas = ExtResource("1_3vyb7")
+region = Rect2(1282, 0, 558, 563)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
+atlas = ExtResource("1_3vyb7")
+region = Rect2(1840, 0, 558, 563)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
+atlas = ExtResource("1_3vyb7")
+region = Rect2(2398, 0, 558, 563)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
+atlas = ExtResource("1_3vyb7")
+region = Rect2(2956, 0, 558, 563)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_smehm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2els")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhqgy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dqkch")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlg0r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tuyoq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjrip")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ur7pv"]
+radius = 147.5
+height = 506.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1736037560]
+position = Vector2(540, 330)
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_g2els")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=481865019]
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_smehm")
+animation = &"walking"
+frame_progress = 0.81363463
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=539545289]
+position = Vector2(2.5, -0.5999756)
+scale = Vector2(0.19999999, 0.19999999)
+shape = SubResource("CapsuleShape2D_ur7pv")
+
+[node name="Label" type="Label" parent="." unique_id=742655983]
+offset_left = -14.999998
+offset_top = -34.999996
+offset_right = 25.000002
+offset_bottom = -19.999996
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = ExtResource("3_qhqgy")
+theme_override_font_sizes/font_size = 9
+text = "<ERROR>"
