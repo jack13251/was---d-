@@ -5,3 +5,5 @@ The time between the wheel appearing can be changed by changing the difficulty i
 Collecting the green RAM around the level adds a bit of time to the interval between wheel spins.
 
 The wooden sign located half way through the level is a checkpoint.
+
+The default (starting) controls are the left and right arrow keys for movement, space to jump and esc to open the menu. The wheel says what your controls will randomise to and if you forget you can check these by pressing esc to open the menu.
